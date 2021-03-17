@@ -1,5 +1,6 @@
 .social {
   display: flex;
+  width: calc(100%/3);
 
   &__link {
     background-size: 40px;

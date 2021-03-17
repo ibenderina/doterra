@@ -13,7 +13,7 @@ import Footer from './components/footer';
 export default function App() {
   return (
       <Router>
-        <div>
+        <div className="container">
           <header className="header">
             <nav className="header__nav wrapper">
               <ul className="header__list">
