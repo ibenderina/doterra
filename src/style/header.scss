@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  background-color: #3e3e3e;
+
+  &__nav {
+    position: relative;
+
+    &:before {
+      content: "doTERRA";
+      position: absolute;
+      display: inline-block;
+      width: 150px;
+      background-color: #d3ea87;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      top: 0;
+      left: 20px;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-left: 200px;
+  }
+
+  &__list-item > a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #d3ea87;
+    }
+
+    &:active,
+    &:focus {
+      opacity: 0.4;
+    }
+  }
+
+  &__list-item:not(:last-child) {
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,33 @@
+.main {
+  padding: 20px;
+
+  &__header {
+    margin: 0 0 15px 0;
+    padding: 0;
+
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.3em;
+    word-wrap: break-word;
+  }
+
+  &__header-second {
+    margin: 0 0 10px 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 1.6em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  &__text {
+    margin: 0;
+    padding: 0;
+
+    font-size: 18px;
+    line-height: 1.6em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+}
