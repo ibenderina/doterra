@@ -1,0 +1,8 @@
+.inner-list {
+  list-style-type: circle;
+  margin-left: 20px;
+
+  &__item {
+    margin: 10px 0;
+  }
+}

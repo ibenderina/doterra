@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -8,7 +8,7 @@ import {
 import About from './components/about';
 import Oils from './components/oils';
 import Work from './components/work';
-import Footer from './components/footer';
+import Auth from './components/auth';
 
 export default function App() {
   return (
@@ -18,7 +18,10 @@ export default function App() {
             <nav className="header__nav wrapper">
               <ul className="header__list">
                 <li className="header__list-item">
-                  <Link class="header__list-link" to="/">О бизнесе в doTerra</Link>
+                  <Link class="header__list-link" to="/about">О бизнесе в doTerra</Link>
+                </li>
+                <li className="header__list-item">
+                  <Link class="header__list-link" to="/">Регистрация</Link>
                 </li>
                 <li className="header__list-item">
                   <Link class="header__list-link" to="/work">Стать консультантом</Link>
@@ -39,11 +42,13 @@ export default function App() {
             <Route path="/work">
               <Work />
             </Route>
-            <Route path="/">
+            <Route path="/about">
               <About />
             </Route>
+            <Route path="/">
+              <Auth />
+            </Route>
           </Switch>
-          <Footer />
         </div>
       </Router>
   );

@@ -3,12 +3,13 @@ const webpack = require(`webpack`);
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const { BaseHrefWebpackPlugin } = require('base-href-webpack-plugin');
 
 module.exports = {
   entry: `./src/index.js`,
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `build`)
+    path: path.join(__dirname, `../doterra-prod`)
   },
   devServer: {
     historyApiFallback: true,
@@ -49,6 +50,7 @@ module.exports = {
     new webpack.ProvidePlugin({
       React: `react`,
     }),
+    new BaseHrefWebpackPlugin({ baseHref: process.env.NODE_ENV === 'development'? '/':'https://ibenderina.github.io/doterra-prod' }),
     new ExtractTextPlugin({filename: 'style.css'}),
     new HtmlWebpackPlugin({
       template: "./public/index.html"
